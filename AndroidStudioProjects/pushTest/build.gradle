@@ -1,0 +1,26 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// 스크립트 안에 넣어도 찾을 수 없다고 떠서 그냥 주석처리 함
+//plugins {
+//    id 'com.android.application' version '7.4.2' apply false
+//    id 'com.android.library' version '7.4.2' apply false
+//}
+
+
+// 빌드 스크립트 먼저 생성 해야함
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        /* build:gradle:7.1.1 추가 이유 --> 너무 최신 버전 빌드는 android와 호환 때문에 적절한 버전 사용하기
+        : 코드 및 리소스를 컴파일 + 패키징 + apk 파일로 빌드하는 작업을 직접 수행 안 하려고 사용 
+         firebase json 파일 복붙 후 구글 관련 서비스 추가 1  */
+        classpath 'com.android.tools.build:gradle:7.1.1'
+        classpath 'com.google.gms:google-services:4.3.15'
+    }
+
+}
+
+
